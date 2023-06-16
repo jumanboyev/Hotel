@@ -1,0 +1,89 @@
+﻿<Window x:Class="Hotel.Windows.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Hotel.Windows"
+        mc:Ignorable="d"
+        xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="LoginWindow" Height="600" Width="450">
+    
+    <Border Margin="40,120" 
+            Background="Black"
+            Opacity="0.6"
+            CornerRadius="10">
+        <StackPanel >
+            <Label Content="Email"
+                   Margin="0 10 0 5"
+                   FontFamily="Jetbrains Mono"
+                   Foreground="White"
+                   FontSize="16"
+                   FontWeight="SemiBold"/>
+            <Border BorderThickness="1"
+                    BorderBrush="White"
+                    Height="35"
+                    CornerRadius="5">
+                <TextBox x:Name="tbEmail"
+                         md:HintAssist.Hint="email"
+                         VerticalAlignment="Center"
+                         Margin="5 0"
+                         BorderThickness="0"
+                         FontSize="16"
+                         Foreground="White"
+                         Background="Transparent"/>
+            </Border>
+
+            <Label Content="Password"
+                   Margin="0 10 0 5"
+                   FontFamily="Jetbrains Mono"
+                   Foreground="White"
+                   FontSize="16"
+                   FontWeight="SemiBold"/>
+            <Border BorderThickness="1"
+                    BorderBrush="White"
+                    Height="35"
+                    CornerRadius="5">
+                
+                <PasswordBox x:Name="tbPassword"
+                         VerticalAlignment="Center"
+                         Margin="5 0"
+                         BorderThickness="0"
+                         FontSize="16"
+                         Foreground="White"
+                         Background="Transparent"/>
+
+                
+                    
+            </Border>
+
+            <Border Height="40"
+                    Margin="0 25 0 0"
+                    Background="Green"
+                    CornerRadius="5">
+                    
+                <Label Content="Login"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Center"
+                       FontFamily="Jetbrains Mono"
+                       Foreground="White"
+                       FontSize="16"
+                       FontWeight="SemiBold"/>
+            </Border>
+
+            <Border Height="40"
+                    Margin="0 25 0 0"
+                    Background="Blue"
+                    CornerRadius="5">
+                <Label Content="Register"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Center"
+                       FontFamily="Jetbrains Mono"
+                       Foreground="White"
+                       FontSize="16"
+                       FontWeight="SemiBold"/>
+            </Border>
+
+        </StackPanel>
+        
+    </Border>
+</Window>
