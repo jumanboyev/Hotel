@@ -68,5 +68,6 @@ namespace Hotel.Windows
             }
             return result > 0;
         }
+        
     }
 }

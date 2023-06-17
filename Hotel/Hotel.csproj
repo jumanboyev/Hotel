@@ -8,6 +8,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Assets\Icons\eye.png" />
+    <None Remove="Assets\Icons\photo_2023-06-16_20-38-39.jpg" />
     <None Remove="Assets\Images\Park-Hotel-Group---Explore---Grand-Park-City-Hall-Facade.jpg" />
   </ItemGroup>
 
@@ -18,6 +20,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Assets\Icons\eye.png" />
+    <Resource Include="Assets\Icons\photo_2023-06-16_20-38-39.jpg" />
     <Resource Include="Assets\Images\Park-Hotel-Group---Explore---Grand-Park-City-Hall-Facade.jpg" />
   </ItemGroup>
 

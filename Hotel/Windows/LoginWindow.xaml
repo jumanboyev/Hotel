@@ -24,7 +24,6 @@
                     Height="35"
                     CornerRadius="5">
                 <TextBox x:Name="tbEmail"
-                         md:HintAssist.Hint="email"
                          VerticalAlignment="Center"
                          Margin="5 0"
                          BorderThickness="0"
@@ -39,28 +38,64 @@
                    Foreground="White"
                    FontSize="16"
                    FontWeight="SemiBold"/>
-            <Border BorderThickness="1"
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="35"/>
+                </Grid.ColumnDefinitions>
+                <Border Grid.Column="0"
+                    BorderThickness="1 1 0 1"
                     BorderBrush="White"
                     Height="35"
-                    CornerRadius="5">
-                
-                <PasswordBox x:Name="tbPassword"
+                    CornerRadius="5 0 0 5">
+                    <Grid>
+                        <PasswordBox x:Name="tbPassword"
                          VerticalAlignment="Center"
                          Margin="5 0"
                          BorderThickness="0"
                          FontSize="16"
                          Foreground="White"
-                         Background="Transparent"/>
+                         Background="Transparent">
 
-                
+                        </PasswordBox>
+                        <TextBox x:Name="tb2Password"
+                         VerticalAlignment="Center"
+                         Margin="5 0"
+                         BorderThickness="0"
+                         FontSize="16"
+                         Visibility="Hidden"
+                         Foreground="White"
+                         Background="Transparent">
+
+                        </TextBox>
+                    </Grid>
                     
-            </Border>
 
+                </Border>
+                 <Border Grid.Column="1"
+                         BorderThickness="0 1 1 1"
+                         BorderBrush="White"
+                         CornerRadius="0 5 5 0"
+                         Background="Transparent"
+                         MouseDown="Border_MouseDown"
+                         >
+                    <Image Source="/Assets/Icons/eye.png"
+                           Height="30" Width="30"
+                           >
+                        
+                    </Image>
+                     
+                </Border>
+
+            </Grid>
+            
             <Border Height="40"
                     Margin="0 25 0 0"
                     Background="Green"
-                    CornerRadius="5">
-                    
+                    CornerRadius="5"
+                    MouseDown="BorderLogin_MouseDown">
+                   
+                
                 <Label Content="Login"
                        VerticalAlignment="Center"
                        HorizontalAlignment="Center"
