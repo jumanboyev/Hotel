@@ -25,4 +25,16 @@
     <Resource Include="Assets\Images\Park-Hotel-Group---Explore---Grand-Park-City-Hall-Facade.jpg" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Assets\Logos\" />
+    <Folder Include="Assets\Sounds\" />
+    <Folder Include="Enums\" />
+    <Folder Include="Components\" />
+    <Folder Include="ViewModels\" />
+    <Folder Include="Repositories\" />
+    <Folder Include="Themes\" />
+    <Folder Include="Styles\" />
+    <Folder Include="Pages\" />
+  </ItemGroup>
+
 </Project>
