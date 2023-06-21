@@ -4,7 +4,7 @@ using System;
 
 namespace Hotel.Entities.Employees;
 
-public class Employee
+public sealed class Employee
 {
     public long PositionId { get; set; }
 

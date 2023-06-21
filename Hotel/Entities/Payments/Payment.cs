@@ -3,7 +3,7 @@ using Hotel.Enums;
 
 namespace Hotel.Entities.Payments;
 
-public class Payment
+public sealed class Payment
 {
     public long BookingID { get; set; }
 

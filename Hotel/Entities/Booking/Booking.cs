@@ -3,7 +3,7 @@ using System;
 
 namespace Hotel.Entities.Booking;
 
-public class Booking
+public sealed class Booking
 {
     public long RoomId { get; set; }
 

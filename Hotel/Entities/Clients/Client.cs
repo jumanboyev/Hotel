@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Hotel.Entities.Clients;
 
-public class Client
+public sealed class Client
 {
     [MaxLength(50)]
     public string FirstName { get; set; } = string.Empty;

@@ -3,7 +3,7 @@ using MaterialDesignThemes.Wpf;
 
 namespace Hotel.Entities.Rooms;
 
-public class Room
+public sealed class Room
 {
     public long Id { get; set; }
 

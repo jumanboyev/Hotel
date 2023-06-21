@@ -5,6 +5,124 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Hotel"
         mc:Ignorable="d"
-        Title="MainWindow" Height="550" Width="400">
+        Title="MainWindow" 
+        Height="700" 
+        Width="1050"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        Background="Transparent"
+        AllowsTransparency="True">
+
+    <Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Border Grid.Row="0" Background="{DynamicResource PrimaryBackground}"
+                    CornerRadius="10,10,0,0"
+                    BorderBrush="{DynamicResource PrimaryBorderColor}"
+                    BorderThickness="0,0,0,1">
+
+                <Grid Margin="10,0,10,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="100"/>
+                    </Grid.ColumnDefinitions>
+                    <Border x:Name="brDragbale" 
+                            Background="{DynamicResource PrimaryBackground}"
+                            MouseDown="brDragbale_MouseDown"
+                            Grid.Column="0"
+                            
+                            Cursor="ScrollAll">
+                        
+                    </Border>
+                    <StackPanel Grid.Column="1" Orientation="Horizontal" >
+                        <Button x:Name="btnMinimize" Click="btnMinimize_Click" Style="{DynamicResource MinimumsizedButton}"/>
+                        <Button x:Name="btnMaximize" Click="btnMaximize_Click" Style="{DynamicResource MaximumsizedButton}"/>
+                        <Button x:Name="btnClose" Click="btnClose_Click" Style="{DynamicResource ClosesizedButton}"/>
+
+                    </StackPanel>
+                </Grid>
+                
+            </Border>
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="250"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid Grid.Column="0" Background="{DynamicResource ThirdaryBackground}">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="110"/>
+                        <RowDefinition Height="*"/>
+
+                    </Grid.RowDefinitions>
+
+                    <Border  Grid.Row="0" Margin="5"  Background="{DynamicResource ThirdaryBackground}"
+                            >
+                        <Image Source="/Assets/Images/Color logo - no background.png"/>
+                    </Border>
+
+                        <Border Grid.Row="1" Background="{DynamicResource ThirdaryBackground}"
+                                CornerRadius="0,0,0,10"
+                                >
+                            
+                            
+                        <StackPanel Margin="0,20"  >
+                            <RadioButton x:Name="rbDashboard" 
+                                         Content="Dashboard"
+                                         Style="{DynamicResource MenuButton}"
+                                         Click="rbDashboard_Click"
+                                         Tag="{DynamicResource Dashboard}"/>
+                            <RadioButton x:Name="rbRoom" 
+                                         Content="Room"
+                                         Style="{DynamicResource MenuButton}"
+                                         Click="rbRoom_Click"
+                                         Tag="{DynamicResource Room}"/>
+                            <RadioButton x:Name="rbClient" 
+                                         Content="Client"
+                                         Style="{DynamicResource MenuButton}"
+                                         Click="rbClient_Click"
+                                         Tag="{DynamicResource Client}"/>
+                            <RadioButton x:Name="rbEmployee" 
+                                         Content="Employee"
+                                         Style="{DynamicResource MenuButton}"
+                                         Click="rbEmployee_Click"
+                                         Tag="{DynamicResource Employee}"/>
+                            
+                            <RadioButton x:Name="rbPayment" 
+                                         Content="Payment"
+                                         Click="rbPayment_Click"
+                                         Tag="{DynamicResource Payment}"
+                                         Style="{DynamicResource MenuButton}"/>
+                            <RadioButton x:Name="rbInformation" 
+                                         Content="Information"
+                                         Click="rbInformation_Click"
+                                         Style="{DynamicResource MenuButton}"
+                                         Tag="{DynamicResource Information}"/>
+                            <RadioButton x:Name="rbDetail" 
+                                         Content="Detail"
+                                         Click="rbDetail_Click"
+                                         Tag="{DynamicResource Detail}"
+                                         Style="{DynamicResource MenuButton}"/>
+                        </StackPanel>
+                        </Border>
+                </Grid>
+
+
+                <Border Grid.Column="1" Background="{DynamicResource SecondaryBackground}"
+                        CornerRadius="0,0,10,0"
+                        BorderThickness="0">
+                    <Frame x:Name="PageNavigator"
+                           NavigationUIVisibility="Hidden"/>
+
+                </Border>
+            </Grid>
+            
+        </Grid>
+        
+    </Grid>
     
 </Window>

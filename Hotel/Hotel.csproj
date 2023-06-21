@@ -10,7 +10,7 @@
   <ItemGroup>
     <None Remove="Assets\Icons\eye.png" />
     <None Remove="Assets\Icons\photo_2023-06-16_20-38-39.jpg" />
-    <None Remove="Assets\Images\Park-Hotel-Group---Explore---Grand-Park-City-Hall-Facade.jpg" />
+    <None Remove="Assets\Images\Color logo - no background.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -22,19 +22,14 @@
   <ItemGroup>
     <Resource Include="Assets\Icons\eye.png" />
     <Resource Include="Assets\Icons\photo_2023-06-16_20-38-39.jpg" />
-    <Resource Include="Assets\Images\Park-Hotel-Group---Explore---Grand-Park-City-Hall-Facade.jpg" />
+    <Resource Include="Assets\Images\Color logo - no background.png" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Assets\Logos\" />
     <Folder Include="Assets\Sounds\" />
-    <Folder Include="Enums\" />
     <Folder Include="Components\" />
     <Folder Include="ViewModels\" />
-    <Folder Include="Repositories\" />
-    <Folder Include="Themes\" />
-    <Folder Include="Styles\" />
-    <Folder Include="Pages\" />
   </ItemGroup>
 
 </Project>

@@ -17,12 +17,12 @@ using System.Windows.Shapes;
 
 namespace Hotel.Windows
 {
+
     /// <summary>
     /// Interaction logic for LoginWindow.xaml
     /// </summary>
     public partial class LoginWindow : Window
     {
-        private object check;
 
         public LoginWindow()
         {
