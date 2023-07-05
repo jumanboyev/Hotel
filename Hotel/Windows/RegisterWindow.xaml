@@ -6,21 +6,23 @@
         xmlns:local="clr-namespace:Hotel.Windows"
         mc:Ignorable="d"
         xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
-        Title="RegisterWindow" Height="600" Width="450"
-        Background="White">
-    <Border Margin="40" 
-            Background="Black"
-            Opacity="0.6"
+        Title="Register" Height="500" Width="400"
+        Background="{DynamicResource SecondaryBackground}"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        >
+    <Border Margin="30,20" 
+            Background="white"
             CornerRadius="10">
-        <StackPanel Margin="20">
+        <StackPanel Margin="5">
             <Label Content="First name"
                    Margin="0 10 0 5"
                    FontFamily="Jetbrains Mono"
-                   Foreground="White"
+                   Foreground="#19A7CE"
                    FontSize="16"
                    FontWeight="SemiBold"/>
             <Border BorderThickness="1"
-                    BorderBrush="White"
+                    BorderBrush="#19A7CE"
                     Height="35"
                     CornerRadius="5">
                 <TextBox x:Name="tbFirstName"
@@ -28,18 +30,18 @@
                          Margin="5 0"
                          BorderThickness="0"
                          FontSize="16"
-                         Foreground="White"
+                         Foreground="#146C94"
                          Background="Transparent"/>
             </Border>
 
             <Label Content="Last name"
                    Margin="0 10 0 5"
                    FontFamily="Jetbrains Mono"
-                   Foreground="White"
+                   Foreground="#19A7CE"
                    FontSize="16"
                    FontWeight="SemiBold"/>
             <Border BorderThickness="1"
-                    BorderBrush="White"
+                    BorderBrush="#19A7CE"
                     Height="35"
                     CornerRadius="5">
                 <TextBox x:Name="tbLastName"
@@ -47,18 +49,18 @@
                          Margin="5 0"
                          BorderThickness="0"
                          FontSize="16"
-                         Foreground="White"
+                         Foreground="#146C94"
                          Background="Transparent"/>
             </Border>
 
             <Label Content="Email"
                    Margin="0 10 0 5"
                    FontFamily="Jetbrains Mono"
-                   Foreground="White"
+                   Foreground="#19A7CE"
                    FontSize="16"
                    FontWeight="SemiBold"/>
             <Border BorderThickness="1"
-                    BorderBrush="White"
+                    BorderBrush="#19A7CE"
                     Height="35"
                     CornerRadius="5">
                 <TextBox x:Name="tbEmail"
@@ -66,18 +68,18 @@
                          Margin="5 0"
                          BorderThickness="0"
                          FontSize="16"
-                         Foreground="White"
+                         Foreground="#146C94"
                          Background="Transparent"/>
             </Border>
 
             <Label Content="Password"
                    Margin="0 10 0 5"
                    FontFamily="Jetbrains Mono"
-                   Foreground="White"
+                   Foreground="#19A7CE"
                    FontSize="16"
                    FontWeight="SemiBold"/>
             <Border BorderThickness="1"
-                    BorderBrush="White"
+                    BorderBrush="#19A7CE"
                     Height="35"
                     CornerRadius="5">
                 <PasswordBox x:Name="tbPassword"
@@ -85,16 +87,16 @@
                          Margin="5 0"
                          BorderThickness="0"
                          FontSize="16"
-                         Foreground="White"
+                         Foreground="#146C94"
                          Background="Transparent"/>
             </Border>
 
             <Border Height="40"
                     Margin="0 25 0 0"
-                    Background="Blue"
+                    Background="#24D6E3"
                     CornerRadius="5"
                     MouseDown="Border_MouseDown">
-                <Label Content="Register"
+                <Label Content="Save"
                        VerticalAlignment="Center"
                        HorizontalAlignment="Center"
                        FontFamily="Jetbrains Mono"
@@ -103,18 +105,6 @@
                        FontWeight="SemiBold"/>
             </Border>
 
-            <Border Height="40"
-                    Margin="0 25 0 0"
-                    Background="Green"
-                    CornerRadius="5">
-                <Label Content="Login"
-                       VerticalAlignment="Center"
-                       HorizontalAlignment="Center"
-                       FontFamily="Jetbrains Mono"
-                       Foreground="White"
-                       FontSize="16"
-                       FontWeight="SemiBold"/>
-            </Border>
         </StackPanel>
     </Border>
 </Window>

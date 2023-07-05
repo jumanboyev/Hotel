@@ -1,19 +1,9 @@
 ﻿using Hotel.Constans;
 using Hotel.Security;
 using Npgsql;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace Hotel.Windows
 {
@@ -31,7 +21,7 @@ namespace Hotel.Windows
 
         private void Border_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            if(tbPassword.Visibility == Visibility.Visible)
+            if (tbPassword.Visibility == Visibility.Visible)
             {
                 tb2Password.Visibility = Visibility.Visible;
                 tb2Password.Text = tbPassword.Password;
@@ -47,19 +37,28 @@ namespace Hotel.Windows
 
         private async void BorderLogin_MouseDown(object sender, MouseButtonEventArgs e)
         {
+
+
+
             string password = tbPassword.Password;
             string email = tbEmail.Text;
 
-            var checking=await CheckAsync(email, password);
+
+            var checking = await CheckAsync(email, password);
             try
             {
-                if (checking == true) MessageBox.Show("Sucsesfull");
-                else MessageBox.Show("Not found");
+                if (checking == true)
+                {
+                    MainWindow mainWindow = new MainWindow();
+                    this.Close();
+                    mainWindow.ShowDialog();
+                }
+                else MessageBox.Show("User topilmadi.Iltimos qaytadan tekshiring");
             }
-            catch 
+            catch
             {
                 MessageBox.Show("Something wrong");
-              
+
             }
         }
         public async Task<bool> CheckAsync(string email, string password)

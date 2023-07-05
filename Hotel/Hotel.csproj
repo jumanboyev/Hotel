@@ -8,28 +8,33 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Assets\Icons\eye.png" />
-    <None Remove="Assets\Icons\photo_2023-06-16_20-38-39.jpg" />
+    <None Remove="Assets\Icons\1052704-200.png" />
+    <None Remove="Assets\Icons\icon-delete-16.jpg" />
+    <None Remove="Assets\Icons\images-removebg-preview.png" />
+    <None Remove="Assets\Icons\imagespay.png" />
     <None Remove="Assets\Images\Color logo - no background.png" />
+    <None Remove="Assets\Images\Screenshot 2023-06-25 011659.png" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
+    <PackageReference Include="LiveCharts.Wpf" Version="0.9.7" />
     <PackageReference Include="MaterialDesignThemes" Version="4.9.0" />
     <PackageReference Include="Npgsql" Version="7.0.4" />
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Assets\Icons\eye.png" />
-    <Resource Include="Assets\Icons\photo_2023-06-16_20-38-39.jpg" />
+    <Resource Include="Assets\Icons\1052704-200.png" />
+    <Resource Include="Assets\Icons\icon-delete-16.jpg" />
+    <Resource Include="Assets\Icons\images-removebg-preview.png" />
+    <Resource Include="Assets\Icons\imagespay.png" />
     <Resource Include="Assets\Images\Color logo - no background.png" />
+    <Resource Include="Assets\Images\Screenshot 2023-06-25 011659.png" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Assets\Logos\" />
     <Folder Include="Assets\Sounds\" />
-    <Folder Include="Components\" />
-    <Folder Include="ViewModels\" />
   </ItemGroup>
 
 </Project>

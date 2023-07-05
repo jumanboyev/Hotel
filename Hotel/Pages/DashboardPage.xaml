@@ -4,11 +4,64 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Hotel.Pages"
+      xmlns:lvcc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+      
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="DashboardPage">
 
-    <Grid>
-        <Label Content="Dash" FontSize="60"/>
+    <Grid Margin="30">
+
+        <Border Height="750"
+                    Margin="20 0 5 20"
+                    CornerRadius="20"
+                    Padding="10"
+                    Background="{DynamicResource PrimaryBorderColor}">
+            <Border.Effect>
+                <DropShadowEffect Color="#858181" BlurRadius="10"/>
+            </Border.Effect>
+            <lvcc:CartesianChart>
+                <lvcc:CartesianChart.AxisX>
+                    <lvcc:Axis x:Name="DateLabel"
+                               Foreground="{DynamicResource FivedaryBackground}"
+                               FontSize="16"
+                               ShowLabels="True"
+                               Labels="Yanvar, Fevral, Mart, Aprel, May, Iyun,Iyul,Avgust,Sentabr,Oktabr,Noyabr,Dekabr">
+                        <lvcc:Axis.Separator>
+                            <lvcc:Separator StrokeThickness="0" Step="1"/>
+                        </lvcc:Axis.Separator>
+                    </lvcc:Axis>
+                </lvcc:CartesianChart.AxisX>
+
+                <lvcc:CartesianChart.AxisY>
+                    <lvcc:Axis Foreground="{DynamicResource FivedaryBackground}"
+                                   MinValue="0"
+                                   MaxValue="140"
+                               ShowLabels="True">
+                        <lvcc:Axis.Separator>
+                            <lvcc:Separator StrokeThickness="0"/>
+                        </lvcc:Axis.Separator>
+                    </lvcc:Axis>
+                </lvcc:CartesianChart.AxisY>
+
+                <lvcc:CartesianChart.Series>
+                    <lvcc:LineSeries x:Name="SetChart" 
+                                         Title="Count"
+                                         Fill="{DynamicResource FivedaryBackground}"
+                                         StrokeThickness="4" PointGeometrySize="10" 
+                                         Values="56,78,132,99,77,75,62,88,136,127,101,47">
+                        <lvcc:LineSeries.Stroke>
+                            <LinearGradientBrush>
+                                <GradientStop Color="Transparent" Offset="0"/>
+                                <GradientStop Color="Black" Offset="0.2"/>
+                                <GradientStop Color="Transparent" Offset="2.5"/>
+                            </LinearGradientBrush>
+                        </lvcc:LineSeries.Stroke>
+                    </lvcc:LineSeries>
+                </lvcc:CartesianChart.Series>
+            </lvcc:CartesianChart>
+
+
+        </Border>
     </Grid>
 </Page>

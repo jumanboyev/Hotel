@@ -1,0 +1,21 @@
+﻿<UserControl x:Class="Hotel.Components.StatusUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Hotel.Components"
+             mc:Ignorable="d" 
+             Height="30" Width="100"
+             >
+    <Border x:Name="brBackground" 
+            CornerRadius="10"
+            Background="#E7B27E">
+        <Label x:Name="tbTitle" FontSize="12" 
+               Margin="5 0"
+               FontWeight="Bold"
+               Foreground="White"
+               Content="Pending"
+               VerticalAlignment="Center"
+               HorizontalAlignment="Center"/>
+    </Border>
+</UserControl>

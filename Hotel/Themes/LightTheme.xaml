@@ -4,9 +4,34 @@
     <SolidColorBrush x:Key="PrimaryBackground" Color="#2F24C1"/>
     <SolidColorBrush x:Key="SecondaryBackground" Color="White"/>
     <SolidColorBrush x:Key="ThirdaryBackground" Color="#4D12EE"/>
+    <SolidColorBrush x:Key="FourdaryBackground" Color="#F6F1F1"/>
+    <SolidColorBrush x:Key="FivedaryBackground" Color="#19A7CE"/>
+    
+    <!--buttun style-->
+    <SolidColorBrush x:Key="PrimarybuttunBackground" Color="#04BE7A"/>
+    <SolidColorBrush x:Key="SecondarybuttunBackground" Color="#04A268"/>
+    <SolidColorBrush x:Key="ThirtdarybuttunBackground" Color="#03774C"/>
+
+    <SolidColorBrush x:Key="GroupBorderColor" Color="#E1A970"/>
+    <GradientStopCollection x:Key="GroupMainColor">
+        <GradientStop Offset="0.0" Color="#FFD79C"/>
+        <GradientStop Offset="0.1" Color="#FCD59A"/>
+        <GradientStop Offset="0.2" Color="#F9D298"/>
+        <GradientStop Offset="0.3" Color="#F6D096"/>
+        <GradientStop Offset="0.4" Color="#F3CD95"/>
+        <GradientStop Offset="0.5" Color="#F0CB93"/>
+        <GradientStop Offset="0.6" Color="#EDC891"/>
+        <GradientStop Offset="0.7" Color="#EAC68F"/>
+        <GradientStop Offset="0.8" Color="#E7C38D"/>
+        <GradientStop Offset="0.9" Color="#E4C18B"/>
+        <GradientStop Offset="1.0" Color="#E1BE8A"/>
+    </GradientStopCollection>
+
+
 
     <SolidColorBrush x:Key="PrimaryBorderColor" Color="White"/>
     <SolidColorBrush x:Key="SecondaryBorderColor" Color="White"/>
+    
 
 
 

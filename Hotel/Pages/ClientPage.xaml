@@ -5,11 +5,180 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Hotel.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
-      Title="ClientPage">
+      Title="ClientPage"
+      d:DesignHeight="450" 
+      Height="1300"
+      Loaded="loaded"
+      
+      Background="Transparent"
+      >
 
-    <Grid>
-        <Label Content="Client" FontSize="60"/>
+    <Border Margin="10" CornerRadius="15"
+            Background="{DynamicResource SecondaryBackground}">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="600"/>
+            </Grid.RowDefinitions>
+            <StackPanel Grid.Row="0"
+                        Margin="3"
+                        HorizontalAlignment="Right"
+                        Orientation="Horizontal">
+                <Border CornerRadius="10"
+                        Width="450" 
+                        Height="40"
+                        Background="{DynamicResource FivedaryBackground}">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="50"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Path Grid.Column="0" Data="{DynamicResource search}"
+                              Width="25" Height="25"
+                              Fill="{DynamicResource SecondaryBackground}"/>
+                        <TextBox x:Name="tbSearch" 
+                                 Grid.Column="1"
+                                  VerticalAlignment="Center"
+                                 FontSize="16"
+                                 Margin="5,0"
+                                 Foreground="{DynamicResource SecondaryBackground}"
+                                 />
+                    </Grid>
+                </Border>
+                <Button x:Name="btnCreate"
+                        Style="{DynamicResource SuccessButton}"
+                        Content="Register"
+                        Click="btnCreate_Click"/>
+            </StackPanel>
 
-    </Grid>
+            <StackPanel Grid.Row="1" >
+
+
+                <Grid>
+                    <Border Background="{DynamicResource SecondaryBackground}"
+                                CornerRadius="5" Margin="0 30 7 0" Width="1220"
+                                BorderThickness="1" BorderBrush="{DynamicResource FivedaryBackground}">
+
+                        <Grid>
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="2*"/>
+                                <ColumnDefinition Width="110"/>
+
+                            </Grid.ColumnDefinitions>
+
+                            <Label Grid.Column="0"
+                   FontWeight="SemiBold"
+                   x:Name="lblRoomNumber"
+            FontSize="16"
+            Foreground="{DynamicResource FivedaryBackground}"
+            HorizontalAlignment="Center"
+            Margin="0 5"
+                Content="Room Number">
+                            </Label>
+
+                            <Label Grid.Column="1"
+                   x:Name="lbRoomType"
+                    Foreground="{DynamicResource FivedaryBackground}"
+                   FontSize="16"
+                   FontWeight="SemiBold"    
+                   HorizontalAlignment="Center"
+                   Margin="0 5"
+                    Content="Room Type">
+                                <Label.Style>
+                                    <Style TargetType="Label">
+                                        <Style.Triggers>
+                                            <Trigger Property="Content" Value="Lux">
+                                                <Setter Property="Foreground" Value="Gold"/>
+                                            </Trigger>
+                                            <Trigger Property="Content" Value="Usual">
+                                                <Setter Property="Foreground" Value="ForestGreen"/>
+                                            </Trigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Label.Style>
+                            </Label>
+                            <Label Grid.Column="2"
+                                           x:Name="lbRoomCapacity"
+                                           FontWeight="SemiBold"
+                                           FontSize="16"
+                                    Foreground="{DynamicResource FivedaryBackground}"
+                                    HorizontalAlignment="Center"
+                                    Margin="0 5" Content="Room Capacity">
+                            </Label>
+
+                            <Label Grid.Column="3" Foreground="{DynamicResource FivedaryBackground}"
+                   FontSize="16"
+                   x:Name="lbType"
+                     FontWeight="SemiBold"
+                    HorizontalAlignment="Center"
+                    Margin="0 5"
+                        Content="Room Status">
+                                <Label.Style>
+                                    <Style TargetType="Label">
+                                        <Style.Triggers>
+                                            <Trigger Property="Content" Value="Empty">
+                                                <Setter Property="Foreground" Value="{DynamicResource BlueButton}"/>
+                                            </Trigger>
+                                            <Trigger Property="Content" Value="Not Empty">
+                                                <Setter Property="Foreground" Value="{DynamicResource Red}"/>
+                                            </Trigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Label.Style>
+                            </Label>
+                            <Label Grid.Column="4"
+                                         FontSize="16"
+                                      x:Name="lbRoomPrice"
+                                      FontWeight="SemiBold"
+                                        Foreground="{DynamicResource FivedaryBackground}"
+                                       HorizontalAlignment="Center"
+                                       Margin="0 5"
+                                   Content="Total Price">
+                            </Label>
+
+                            <Label Grid.Column="5" 
+                                    FontSize="16"
+                                    x:Name="lbFullName"
+                                    FontWeight="SemiBold"
+                                    Foreground="{DynamicResource FivedaryBackground}"
+                                    HorizontalAlignment="Center"
+                                    Margin="0 5"
+                                    Content="Client FIO">
+
+                            </Label>
+                            <Label Grid.Column="6" Content="Operation"
+                                        FontSize="16"
+                                        FontWeight="SemiBold"
+                                        Foreground="{DynamicResource FivedaryBackground}"
+                                        HorizontalAlignment="Center"
+                                        Margin="0 5"/>
+
+                        </Grid>
+                    </Border>
+                </Grid>
+
+            </StackPanel>
+            
+               
+                    <!--<WrapPanel x:Name="wrpClients" 
+                            Margin="10" >
+
+                    </WrapPanel>-->
+            <ScrollViewer  Grid.Row="2"  VerticalScrollBarVisibility="Auto">
+                <WrapPanel x:Name="stcClient"
+                 ScrollViewer.VerticalScrollBarVisibility="Visible"        >
+                </WrapPanel>
+            </ScrollViewer>
+            
+            
+        </Grid>
+    </Border>
+
 </Page>

@@ -1,11 +1,11 @@
 ﻿using Hotel.Enums;
 using MaterialDesignThemes.Wpf;
+using System;
 
 namespace Hotel.Entities.Rooms;
 
-public sealed class Room
+public sealed class Room :Auditable
 {
-    public long Id { get; set; }
 
     public short Number { get; set; }
 
@@ -19,4 +19,5 @@ public sealed class Room
 
     public string Describtion { get; set; } = string.Empty;
 
+    
 }

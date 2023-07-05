@@ -20,6 +20,7 @@ namespace Hotel.Windows
 
         private async void Border_MouseDown(object sender, MouseButtonEventArgs e)
         {
+            int count = 0;
             var user = new Users();
             user.FirstName = tbFirstName.Text;
             user.LastName = tbLastName.Text;
@@ -30,17 +31,30 @@ namespace Hotel.Windows
 
             user.PasswordHash = hasherResult.PasswordHash;
             user.Salt= hasherResult.Salt;
+            if (tbFirstName.Text.Length > 0) count++;
+            if (tbLastName.Text.Length > 0) count++;
+            if (tbEmail.Text.Length > 10 && tbEmail.Text.Contains("@gmail.com")) count++;
+            if (tbPassword.ToString().Length > 0) count++;
 
-            try
+            if (count == 4)
             {
-                var dbResult= await RegisterAsync(user);
-                if (dbResult) MessageBox.Show("Saqlandi");
-                else MessageBox.Show("Saqlanmadi");
+                try
+                {
+                    var dbResult = await RegisterAsync(user);
+                    if (dbResult)
+                    { 
+                        MessageBox.Show("Muvaffaqiyatli saqlandi");
+                        this.Close();
+
+                    }
+                    else MessageBox.Show("Saqlanmadi");
+                }
+                catch
+                {
+                    MessageBox.Show("Xatoli");
+                }
             }
-            catch 
-            {
-                MessageBox.Show("Xatoli");
-            }
+            else MessageBox.Show("Malumotlaringiz to'g'ri kelmadi.Iltimos ma'lumotlaringizni qayta tekshiring");
         }
 
         public async Task<bool> RegisterAsync(Users user)

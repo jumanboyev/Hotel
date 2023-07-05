@@ -9,11 +9,14 @@
         Height="700" 
         Width="1050"
         WindowStyle="None"
+        WindowState="Maximized"
         ResizeMode="NoResize"
         WindowStartupLocation="CenterScreen"
         Background="Transparent"
         AllowsTransparency="True">
 
+   
+    
     <Grid>
         <Grid>
             <Grid.RowDefinitions>
@@ -28,7 +31,7 @@
                 <Grid Margin="10,0,10,0">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="67"/>
                     </Grid.ColumnDefinitions>
                     <Border x:Name="brDragbale" 
                             Background="{DynamicResource PrimaryBackground}"
@@ -40,7 +43,6 @@
                     </Border>
                     <StackPanel Grid.Column="1" Orientation="Horizontal" >
                         <Button x:Name="btnMinimize" Click="btnMinimize_Click" Style="{DynamicResource MinimumsizedButton}"/>
-                        <Button x:Name="btnMaximize" Click="btnMaximize_Click" Style="{DynamicResource MaximumsizedButton}"/>
                         <Button x:Name="btnClose" Click="btnClose_Click" Style="{DynamicResource ClosesizedButton}"/>
 
                     </StackPanel>
@@ -73,37 +75,32 @@
                         <StackPanel Margin="0,20"  >
                             <RadioButton x:Name="rbDashboard" 
                                          Content="Dashboard"
+                                         Height="50"
                                          Style="{DynamicResource MenuButton}"
                                          Click="rbDashboard_Click"
                                          Tag="{DynamicResource Dashboard}"/>
                             <RadioButton x:Name="rbRoom" 
-                                         Content="Room"
+                                         Height="50"
+                                         Content="Room" 
                                          Style="{DynamicResource MenuButton}"
                                          Click="rbRoom_Click"
                                          Tag="{DynamicResource Room}"/>
                             <RadioButton x:Name="rbClient" 
-                                         Content="Client"
+                                         Height="50"
+                                         Content="Client" 
                                          Style="{DynamicResource MenuButton}"
                                          Click="rbClient_Click"
                                          Tag="{DynamicResource Client}"/>
                             <RadioButton x:Name="rbEmployee" 
+                                         Height="50"
                                          Content="Employee"
                                          Style="{DynamicResource MenuButton}"
                                          Click="rbEmployee_Click"
                                          Tag="{DynamicResource Employee}"/>
                             
-                            <RadioButton x:Name="rbPayment" 
-                                         Content="Payment"
-                                         Click="rbPayment_Click"
-                                         Tag="{DynamicResource Payment}"
-                                         Style="{DynamicResource MenuButton}"/>
-                            <RadioButton x:Name="rbInformation" 
-                                         Content="Information"
-                                         Click="rbInformation_Click"
-                                         Style="{DynamicResource MenuButton}"
-                                         Tag="{DynamicResource Information}"/>
                             <RadioButton x:Name="rbDetail" 
-                                         Content="Detail"
+                                         Height="50"
+                                         Content="Detail" 
                                          Click="rbDetail_Click"
                                          Tag="{DynamicResource Detail}"
                                          Style="{DynamicResource MenuButton}"/>
@@ -111,14 +108,14 @@
                         </Border>
                 </Grid>
 
-
-                <Border Grid.Column="1" Background="{DynamicResource SecondaryBackground}"
-                        CornerRadius="0,0,10,0"
-                        BorderThickness="0">
+                
+                <StackPanel Grid.Column="1" Background="{DynamicResource SecondaryBackground}"
+                            >
+                        
                     <Frame x:Name="PageNavigator"
-                           NavigationUIVisibility="Hidden"/>
+                           NavigationUIVisibility="Hidden" Navigated="PageNavigator_Navigated"/>
 
-                </Border>
+                </StackPanel>
             </Grid>
             
         </Grid>

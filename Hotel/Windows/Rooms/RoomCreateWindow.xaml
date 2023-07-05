@@ -1,0 +1,116 @@
+﻿<Window x:Class="Hotel.Windows.RoomCreateWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Hotel.Windows"
+        mc:Ignorable="d"
+        Loaded="Window_Loaded"
+        Title="Create New Window" 
+        WindowStartupLocation="CenterScreen"
+        Height="530"
+        Width="500">
+    <Window.Resources>
+        <Style x:Key="TitleLabel" TargetType="{x:Type Label}">
+            <Setter Property="Foreground" Value="{DynamicResource FivedaryBackground}"/>
+            <Setter Property="FontFamily" Value="Jetbrains Mono"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Margin" Value="0 5"/>
+        </Style>
+    </Window.Resources>
+    <Grid Background="{DynamicResource SecondaryBackground}">
+        <StackPanel Orientation="Vertical"
+                    Margin="20 5">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="0" Margin="0 0 5 0">
+                    <Label Content="Number" Style="{DynamicResource TitleLabel}"/>
+                    <Border CornerRadius="10" BorderThickness="1" BorderBrush="{DynamicResource FivedaryBackground}"
+                        Background="{DynamicResource SecondaryBackground}"
+                        Height="50">
+                        <TextBox x:Name="tbNumber"
+                         Grid.Column="1"
+                         VerticalAlignment="Center"
+                         FontSize="16"
+                         Margin="10 0 10 0"
+                         FontFamily="Jetbrains Mono"
+                         BorderThickness="0"
+                         Foreground="{DynamicResource FivedaryBackground}"
+                         Background="{DynamicResource SecondaryBackground}"/>
+                    </Border>
+
+                </StackPanel>
+                <StackPanel Grid.Column="1" Margin="5 0 0 0">
+                    <Label Content="Capacity" Style="{DynamicResource TitleLabel}"/>
+                    <Border CornerRadius="10" BorderThickness="1" BorderBrush="{DynamicResource FivedaryBackground}"
+                        Background="{DynamicResource SecondaryBackground}"
+                        Height="50">
+                        <TextBox x:Name="tbCapacity"
+                         Grid.Column="1"
+                         VerticalAlignment="Center"
+                         FontSize="16"
+                         Margin="10 0 10 0"
+                         FontFamily="Jetbrains Mono"
+                         BorderThickness="0"
+                         Foreground="{DynamicResource FivedaryBackground}"
+                         Background="{DynamicResource SecondaryBackground}"/>
+                    </Border>
+
+                </StackPanel>
+            </Grid>
+
+            <Label Content="Type" Style="{DynamicResource TitleLabel}"/>
+            <ComboBox x:Name="cmbtype" 
+                      Height="50"
+                      VerticalAlignment="Center"
+                      SelectedValuePath="Id"
+                      Style="{DynamicResource FormComboBox}"
+                >
+            </ComboBox>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="0" Margin="0 0 5 0">
+                    <Label Content="Price" Style="{DynamicResource TitleLabel}"/>
+                    <Border CornerRadius="10" BorderThickness="1" BorderBrush="{DynamicResource FivedaryBackground}"
+                        Background="{DynamicResource SecondaryBackground}"
+                        Height="50">
+                        <TextBox x:Name="tbPrice"
+                         Grid.Column="1"
+                         VerticalAlignment="Center"
+                         FontSize="16"
+                         Margin="10 0 10 0"
+                         FontFamily="Jetbrains Mono"
+                         BorderThickness="0"
+                         Foreground="{DynamicResource FivedaryBackground}"
+                         Background="{DynamicResource SecondaryBackground}"/>
+                    </Border>
+
+                </StackPanel>
+            </Grid>
+            <Label Content="Description" Style="{DynamicResource TitleLabel}"/>
+            <Border CornerRadius="10" BorderThickness="1" BorderBrush="{DynamicResource FivedaryBackground}"
+                    Background="{DynamicResource SecondaryBackground}"
+                    Height="100">
+                <RichTextBox x:Name="rbDescription"
+                         FontSize="16"
+                         Margin="10 10 10 10"
+                         FontFamily="Jetbrains Mono"
+                         BorderThickness="0"
+                         Foreground="{DynamicResource FivedaryBackground}"
+                         Background="{DynamicResource SecondaryBackground}"/>
+            </Border>
+            <Button x:Name="btnSave" 
+                    Click="btnSave_Click" 
+                    Margin="0 20 0 10" 
+                    Height="50" 
+                    Style="{DynamicResource SuccessButton}" Content="Save"/>
+        </StackPanel>
+    </Grid>
+</Window>

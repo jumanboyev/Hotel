@@ -8,8 +8,73 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="DetailPage">
 
-    <Grid>
-        <Label Content="Detail" FontSize="60"/>
+    <Grid Margin="30 10" Height="800">
+
+        <ScrollViewer >
+            <TextBlock TextWrapping="Wrap" Margin="30 10" FontSize="20" Text="Vaqtini yo‘lda o‘tkazishga majbur bhlgan odamlarda tanlash imkoniyati bo‘lmagan. Bugungi kunda mehmonxona mahsulidan foydalanuvchilarga joylashtirish korxonalarining rang-barang shakllari va turlari, chunonchi, iqtisodiy klassga mansub bo‘lgan hashamatli otellar va mehmonxonalar, motellar, kempinglar va h.k. taklif qilinadi. Har bir odam o‘z didi va puliga qarab hzi uchun ma’qul variantni tanlash imkoniyatiga ega.
+
+O‘zbekiston iqtisodiyotida bozor munosabatlari ancha jo‘shqin rivojlanmoqda. Bu mehmonxona servisida band bhlgan tijoratchilarga katta imkoniyatlar yaratmoqda. O‘zbekiston bilan  chet elda mehmonxona ishini tashkil etishdagi keskin tafovutlar asta-sekin yo‘qolib bormoqda. O‘zbekiston Respublikasining mehmonxona korxonalari mijozlarga xizmat ko‘rsatish saviyasini, nomerlarning shinamligi va qulayligi darajasini, xizmat ko‘rsatuvchi xodimlarning malakasini izchil oshirib bormoqdalar.
+
+Mehmonxona servisi korxonalarining rang-barangligi, shuningdek vaqti-vaqti bilan  mehmonxona xizmati yangi-yangi turlarining paydo bo‘lishi joylashtirish korxonalari tasnifi va tipologiyasini ancha shartli qilib qo‘yadi. 24-jadvalda dunyoning aksariyat davlatlariga xos bo‘lgan 7 har xil toifa bo‘yicha mehmonxona korxonalari 9 turining solishtirma tavsifi berilgan.
+
+Zamonaviy korxonalar vazifasiga, sig‘imiga, qavatlariga, konstruksiyasining tipiga, shinamlik darajasiga, foydalanish rejimiga (yillik, mavsumiy), joylashgan yeriga (shahar, kurort va h.k.), ular nima maqsadga mo‘ljallanganligiga, oziq-ovqat bilan  ta’minlanganligiga, narx-navo darajasiga qarab farqlanadi. Loyihalash paytida bu omillarning barchasi hisobga olinadi va mehmonxona xonalarining tarkibiga, binoning memorlik-tarx tuzilishiga va shu kabilarga ta’sir ko‘rsatadi. Mehmonxonalarni tavsiflovchi asosiy belgilar: ularning sig‘imi, necha qavatdan iboratligi, vazifasi va shinamlik darajasi.
+
+Ma’lum joy hududida joylashishiga qarab mehmonxonalar:
+
+-   shaharda (shahar markazida, shahar chekkasida) joylashgan  mehmonxonalarga;
+
+-   qishloqda (shu jumladan baland tog‘ hududidagi qishloqda) joylashgan mehmonxonalarga bo‘linadi.
+
+Nomerlar fondining sig‘imi. Mehmonxona sig‘imi doimiy uxlash joylarining miqdori bilan  belgilanadi. Mehmonxonalar sig‘imiga qarab turli mamlakatlarda har xil tasniflanadi. Masalan, Shveysariya va Avstriyada 100 tadan kam joyga ega mehmonxonalar kichik mehmonxona, 100-200 ta joyga ega mehmonxonalar o‘rtacha mehmonxona, 200 tadan ortiq joyga ega mehmonxonalar yirik mehmonxona; Chexiyada 120 tadan kam joyga ega mehmonxonalar kichik mehmonxona, 500 tagacha joyga ega mehmonxonalar o‘rtacha mehmonxona, 500 tadan ortiq joyga ega mehmonxonalar katta mehmonxona; AQShda 100 tadan kam nomerga ega mehmonxonalar kichik mehmonxona, 500 tagacha nomerga ega mehmonxonalar o‘rtacha mehmonxona, 500 tadan ortiq nomerga ega mehmonxonalar yirik mehmonxona hisoblanadi[1].
+
+Bizning mamlakatimizda mehmonxonalar sig‘imiga qarab rasman tasniflanmaydi, shu bois ularni quyidagi guruhlash taklif etiladi: 150 tagacha joyga (100 tagacha nomerga) ega mehmonxonalar kichik mehmonxona, 150-400 ta joyga (300 tagacha nomerga) ega mehmonxonalar o‘rtacha mehmonxona, 400 tadan ortiq joyga (300 tadan ortiq nomerga) ega mehmonxonalar katta mehmonxona hisoblanadi.
+
+Jahon mehmonxona nomerlari fondi asosan kichik va o‘rtacha mehmonxonalarda joylashgan.
+
+So‘nggi vaqtda turizmning jiddiy o‘sishi munosabati bilan  hamda iqtisodiy shart-sharoitlarga ko‘ra ayrim yangimehmonxonalar sig‘imining kattalashishi qayd etilmoqda.
+
+Katta sig‘imli mehmonxonalarning qurilishi eng avvalo iqtisodiy manfaatlar bilan  belgilanadi. Agar mehmonxona sig‘imi katta bhlsa, nisbatan kuchli va zamonaviy texnologik va muhandislik uskunalarini qo‘llash maqsadga muvofiq bo‘ladi, ishchi maydonning umumiy maydonga nisbati ortadi, yordamchi maydon, shuningdek koridorlar, xollar, yo‘laklar maydoni bevosita mehmonlar ixtiyoriga beriladigan maydonga nisbatan qisqaradi, bu esa umumiy qurilish harajatlarining qisqarishiga olib keladi. Masalan, mehmonxonalarni loyihalash bilan  shug‘ullanuvchi memorlarning hisob-kitoblariga qaraganda, shinamligi bir xil bo‘lgan mehmonxonalarda ularning sig‘imi 3,3 barvar (132 joydan 440 joyga) ko‘paytirilsa, har bir mehmonxona joyi uchun qurilish harajatlari taxminan 27% ga kamayadi, nomerlar miqdori 100 tadan 400 taga (ya’ni 4 baravar) ko‘paytirilsa, bu oshxona maydonini faqat 2 baravar, yordamchi xonalar maydonini esa atigi 50% ga kattalashtirishni taqozo etadi. Katta mehmonxonalarda xizmat ko‘rsatuvchi xodimlar mehnatidan nisbatan oqilona foydalaniladi; mehmonxona ma’murlari, shu jumladan katta haq to‘lanadigan ma’murlar soni ham qisqaradi; korxona harajatlarini kamaytirgan holda, mijozlarga ko‘rsatiladigan xizmatlar sonini oshirish mumkin bo‘ladi.
+
+Ayni vaqtda, mehmonxonalar qurish va ulardan foydalanish sohasidagi milliy va xorijiy mutaxassislar mehmonxonalar sig‘imini oqilona chegaragacha oshirish kerak, aks holda ularni boshqarish juda qiyinlashishi mumkinligini qayd etmoqdalar. Asosan 2000 ta joy mana shunday chegara deb hisoblanadi. Katta sig‘imli mehmonxona qurish talab etilgan hollarda odatda mehmonxona komplekslari qurishga o‘tiladi.
+
+Asosiy (nomerlar fondida ko‘rsatiladigan) pullik xizmatlarga belgilangan narx-navo darajasiga qarab,  mehmonxonalar[2]:
+
+-   byudjet mehmonxonalariga (25-35 AQSH dollari);
+
+-   iqtisodiy mehmonxonalarga (35-55 AQSH dollari;
+
+-   o‘rtacha mehmonxonalarga (55-95 AQSH dollari);
+
+-   birinchi toifali mehmonxonalarga (95-195 AQSH dollari);
+
+-   apart-otellarga (65-125 AQSH dollari);
+
+-   lyuks-otellarga (125-525 AQSH dollari) bo‘linadi.
+
+Mijozlarning yashash muddatiga qarab:
+
+-   uzoq muddat yashashga mo‘ljallangan;
+
+-   qisqa vaqt yashashga mo‘ljallangan mehmonxonalar farqlanadi.
+
+Yil davomida faoliyat ko‘rsatish muddatiga qarab:
+
+-   yillik (butun yil mobaynida ishlaydigan) mehmonxonalar;
+
+-   mavsumiy (yozda, qishda ishlaydigan) mehmonxonalar farqlanadi.
+
+Mehmonxonalarda yashovchilarni ovqatlantirish usuliga qarab:
+
+-   to‘liq pansion bilan  ta’minlovchi mehmonxonalar;
+
+-   faqat nonushta beradigan mehmonxonalar;
+
+-   ovqatlanishni taklif qilmaydigan (qoida tariqasida, o‘z gastronomik ishlab chiqarishi, ya’ni restorani yoki boshqa korxonasi yo‘qligi tufayli) mehmonxonalar farqlanadi..">
+                
+            </TextBlock>
+                
+        </ScrollViewer>
+        
 
     </Grid>
 </Page>

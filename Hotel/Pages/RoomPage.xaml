@@ -5,11 +5,55 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Hotel.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
-      Title="RoomPage">
+      Title="RoomPage"
+      Loaded="Page_Loaded">
 
-    <Grid>
-        <Label Content="room" FontSize="60"/>
-
-    </Grid>
+    
+    
+    <Border Margin="10" CornerRadius="15"
+            Background="{DynamicResource SecondaryBackground}">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="750"/>
+            </Grid.RowDefinitions>
+            <StackPanel Grid.Row="0"
+                        Margin="0 5 0 20"
+                        HorizontalAlignment="Right"
+                        Orientation="Horizontal">
+                <Border CornerRadius="10"
+                        Width="450" 
+                        Background="{DynamicResource FivedaryBackground}">
+                    <Grid Margin="4">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="50"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Path Grid.Column="0" Data="{DynamicResource search}"
+                              Width="25" Height="25"
+                              Fill="{DynamicResource SecondaryBackground}"/>
+                        <TextBox x:Name="tbSearch" 
+                                 Grid.Column="1"
+                                  VerticalAlignment="Center"
+                                 FontSize="16"
+                                 Margin="5,0"
+                                 Foreground="{DynamicResource SecondaryBackground}"
+                                 />
+                    </Grid>
+                </Border>
+                <Button x:Name="btnCreate"
+                        Style="{DynamicResource SuccessButton}"
+                        Content="Create"
+                        Click="btnCreate_Click"/>
+            </StackPanel>
+            <ScrollViewer Margin="5 5 0 5"
+                          Grid.Row="1">
+                
+                <WrapPanel x:Name="wrpRooms"
+                            Margin="10">
+                
+            </WrapPanel>
+            </ScrollViewer>
+        </Grid> 
+    </Border>
 </Page>

@@ -1,4 +1,9 @@
-﻿using System;
+﻿using Hotel.Components.Rooms;
+using Hotel.Interfaces.Rooms;
+using Hotel.Repositories.Rooms;
+using Hotel.Utils;
+using Hotel.Windows;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +25,38 @@ namespace Hotel.Pages
     /// </summary>
     public partial class RoomPage : Page
     {
+        private readonly IRoomRepository _roomRepository;
         public RoomPage()
         {
             InitializeComponent();
+            this._roomRepository = new RoomRepository();
+        }
+
+        private void btnCreate_Click(object sender, RoutedEventArgs e)
+        {
+            RoomCreateWindow roomCreateWindow = new RoomCreateWindow();
+            roomCreateWindow.ShowDialog();
+        }
+
+        public async Task RefreshAsync()
+        {
+            PaginationParams paginationParams = new PaginationParams()
+            {
+                PageNumber = 1,
+                PageSize = 30
+            };
+            var rooms = await _roomRepository.GetAllAsync();
+
+            foreach (var room in rooms)
+            {
+                RoomViewUserControl roomViewUserControl = new RoomViewUserControl();
+                roomViewUserControl.SetData(room);
+                wrpRooms.Children.Add(roomViewUserControl);
+            }
+        }
+        private  async void  Page_Loaded(object sender, RoutedEventArgs e)
+        {
+           await RefreshAsync();
         }
     }
 }

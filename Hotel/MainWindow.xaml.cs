@@ -1,4 +1,5 @@
 ﻿using Hotel.Pages;
+using Hotel.Windows;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -70,8 +71,11 @@ namespace Hotel
 
         private void rbEmployee_Click(object sender, RoutedEventArgs e)
         {
-            EmployeePage employeePage=new EmployeePage();
-            PageNavigator.Content=employeePage;
+            RegisterWindow registerWindow = new RegisterWindow();
+            registerWindow.ShowDialog();
+
+            //EmployeePage employeePage=new EmployeePage();
+            //PageNavigator.Content=employeePage;
         }
 
         private void rbPayment_Click(object sender, RoutedEventArgs e)
@@ -90,6 +94,11 @@ namespace Hotel
         {
             DetailPage detailPage=new DetailPage();
                 PageNavigator.Content=detailPage;
+        }
+
+        private void PageNavigator_Navigated(object sender, NavigationEventArgs e)
+        {
+
         }
     }
 }
