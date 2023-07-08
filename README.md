@@ -1,1 +1,1 @@
-# this Hotel is very beatiful
+Hotel
