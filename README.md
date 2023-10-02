@@ -1,5 +1,4 @@
 # Hotel
-<br/>
 Login | Register
 -----|-----
 ![Login](https://github.com/jumanboyev/Hotel/assets/123434293/37286ece-eb21-4c98-a871-cbb6c0f01709) | ![Register](https://github.com/jumanboyev/Hotel/assets/123434293/fa289717-38fe-4d63-b01f-02dd0b5376a2)
